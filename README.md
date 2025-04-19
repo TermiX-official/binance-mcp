@@ -4,6 +4,10 @@
 
 Binance MCP Server is a backend service designed to interact with the Binance API. It facilitates seamless interaction with the Binance exchange, enabling users to view their portfolio, convert tokens, and execute trades with minimal market impact. The server utilizes the Model Context Protocol (MCP) framework to ensure secure, structured, and efficient transactions.
 
+<a href="https://glama.ai/mcp/servers/@TermiX-official/binance-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@TermiX-official/binance-mcp/badge" alt="Binance Server MCP server" />
+</a>
+
 ### Key Functionalities:
 
 - Interact with Binance exchange API for account information and trading
