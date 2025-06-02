@@ -3,16 +3,18 @@ FROM node:18-slim
 # Create app directory
 WORKDIR /usr/src/app
 
-RUN npm install -g pnpm
-
 # Copy package files
-COPY package.json pnpm-lock.yaml ./
+COPY package*.json ./
 
-# Install dependencies
-RUN pnpm install --frozen-lockfile
+# Install dependencies and TypeScript globally
+RUN npm install -g typescript @types/node
+RUN npm install
 
 # Copy source code
 COPY . .
+
+# Install Binance API type definitions
+RUN npm install --save-dev @binance/connector-typescript
 
 # Build TypeScript code
 RUN npm run build

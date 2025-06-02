@@ -48,6 +48,35 @@ cd binance-mcp-server
 npm install  # or yarn install
 ```
 
+## Docker Deployment
+
+### Using Docker
+
+Build and run the container:
+
+```bash
+# Build the Docker image
+npm run docker:build
+
+# Run the container
+npm run docker:run
+```
+
+### Using Docker Compose
+
+Run with docker-compose:
+
+```bash
+# Build and start services
+npm run docker:compose:build
+
+# View logs
+npm run docker:logs
+
+# Stop services
+docker-compose down
+```
+
 ## Configuration
 
 To configure the server, create a `.env` file in the root directory and specify the following variables:
@@ -216,41 +245,3 @@ When a transaction fails, the server returns an error message with details. Chec
 This project is open-source under the MIT License.
 
 For contributions, bug reports, or feature requests, submit an issue on [GitHub](https://github.com/your-repo/binance-mcp-server).
-
-## Docker Deployment
-
-### Using Docker
-
-Build and run the container:
-
-```bash
-# Build the Docker image
-npm run docker:build
-
-# Run the container
-npm run docker:run
-```
-
-### Using Docker Compose
-
-Run with docker-compose:
-
-```bash
-# Build and start services
-npm run docker:compose:build
-
-# View logs
-npm run docker:logs
-
-# Stop services
-docker-compose down
-```
-
-### Environment Variables
-
-Create a `.env` file with your Binance API credentials:
-
-```env
-BINANCE_API_KEY=your_api_key_here
-BINANCE_API_SECRET=your_api_secret_here
-```
