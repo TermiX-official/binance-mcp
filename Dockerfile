@@ -3,11 +3,13 @@ FROM node:18-slim
 # Create app directory
 WORKDIR /usr/src/app
 
+RUN npm install -g pnpm
+
 # Copy package files
-COPY package*.json ./
+COPY package.json pnpm-lock.yaml ./
 
 # Install dependencies
-RUN npm install
+RUN pnpm install --frozen-lockfile
 
 # Copy source code
 COPY . .
