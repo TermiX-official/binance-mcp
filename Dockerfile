@@ -19,11 +19,13 @@ RUN npm install --save-dev @binance/connector-typescript
 # Build TypeScript code
 RUN npm run build
 
-# Expose port if needed (for HTTP server)
-EXPOSE 3000
+# Expose port for HTTP server (changed from 3000)
+EXPOSE 8080
 
 # Set environment variables
 ENV NODE_ENV=production
+ENV PORT=8080
+ENV HOST=0.0.0.0
 
 # Start the server
 CMD ["node", "build/index.js"]
