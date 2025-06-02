@@ -48,6 +48,35 @@ cd binance-mcp-server
 npm install  # or yarn install
 ```
 
+## Docker Deployment
+
+### Using Docker
+
+Build and run the container:
+
+```bash
+# Build the Docker image
+npm run docker:build
+
+# Run the container
+npm run docker:run
+```
+
+### Using Docker Compose
+
+Run with docker-compose:
+
+```bash
+# Build and start services
+npm run docker:compose:build
+
+# View logs
+npm run docker:logs
+
+# Stop services
+docker-compose down
+```
+
 ## Configuration
 
 To configure the server, create a `.env` file in the root directory and specify the following variables:

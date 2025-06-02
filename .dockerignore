@@ -1,0 +1,34 @@
+# Node.js
+node_modules
+npm-debug.log
+pnpm-lock.yaml
+*.log
+*.env
+.env
+.env.*
+!/.env.example
+
+# TypeScript
+*.tsbuildinfo
+
+# Build output
+build
+dist
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Git
+.git
+.gitignore
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

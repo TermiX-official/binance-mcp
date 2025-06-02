@@ -16,6 +16,7 @@ import { registerBinanceDualInvestmentTools } from "./tools/binance-dual-investm
 import { registerBinanceMiningTools } from "./tools/binance-mining/index.js";
 import { registerBinanceVipLoanTools } from "./tools/binance-vip-loan/index.js";
 import { registerBinanceStakingTools } from "./tools/binance-staking/index.js";
+import { registerHealthCheck } from "./health.js";
 // Load environment variables
 dotenv.config();
 
@@ -25,6 +26,9 @@ export async function main() {
         name: "binance-mcp",
         version: "1.0.0"
     });
+
+    // Register health check
+    registerHealthCheck(server);
 
     // Register all tools
     registerBinanceSpotTools(server);
